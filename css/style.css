@@ -1858,6 +1858,133 @@ div {
     }
 }
 
+/* Override theme for clear white background, crisp contrast, and faster native scroll */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: #ffffff;
+    color: #0f172a;
+}
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+a:hover,
+a:focus {
+    color: #0f172a;
+}
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+.site-header .header-inner {
+    padding: 1rem 0;
+}
+.site-header .brand {
+    color: #0f172a;
+    font-weight: 700;
+}
+.site-header .main-nav a {
+    color: #0f172a;
+    margin-left: 1.75rem;
+    font-weight: 600;
+}
+.site-header .main-nav a:hover {
+    color: #2563eb;
+}
+.hero-section,
+.section,
+.social-panel,
+.about-card,
+.timeline-card,
+.hero-image-frame,
+.site-footer {
+    background: #ffffff;
+}
+.hero-section {
+    color: #0f172a;
+    padding: 5rem 0 4rem;
+}
+.hero-copy .eyebrow,
+.section-label {
+    color: #2563eb;
+}
+.hero-copy h1,
+.section-heading h2,
+.about-card h3,
+.timeline-card h3,
+.social-panel h2,
+.site-footer p {
+    color: #0f172a;
+}
+.hero-copy p,
+.section-heading p,
+.about-card p,
+.timeline-card p,
+.social-panel p,
+.timeline-meta span {
+    color: #334155;
+}
+.hero-actions .btn-primary {
+    background: linear-gradient(135deg, #0f172a 0%, #2563eb 100%);
+    box-shadow: 0 20px 45px rgba(37, 99, 235, 0.2);
+    color: #ffffff;
+    border: none;
+}
+.hero-actions .btn-outline,
+.social-link {
+    color: #0f172a;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    background: rgba(255, 255, 255, 0.92);
+}
+.hero-actions .btn-outline:hover,
+.social-link:hover {
+    background: rgba(37, 99, 235, 0.08);
+    border-color: rgba(37, 99, 235, 0.24);
+}
+.hero-highlights span,
+.footer-inner p {
+    color: #475569;
+}
+.hero-image-frame,
+.about-card,
+.timeline-card,
+.social-panel {
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.05);
+    border-radius: 28px;
+}
+.social-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+.social-link i {
+    color: #2563eb;
+}
+.sticky-actions {
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(15, 23, 42, 0.12);
+}
+.sticky-actions span {
+    color: #0f172a;
+}
+.sticky-actions a {
+    color: #2563eb;
+}
+.section-intro {
+    background: transparent;
+    color: #0f172a;
+}
+.section-heading p {
+    color: #475569;
+}
+.site-footer {
+    border-top: 1px solid rgba(15, 23, 42, 0.08);
+}
+
 @media screen and (max-width: 1280px) {
     #menu ul {
         margin-top: 100px;
