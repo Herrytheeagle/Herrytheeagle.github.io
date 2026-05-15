@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="utf-8">
@@ -29,8 +29,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
   <!-- Styles -->
@@ -39,6 +38,13 @@
 </head>
 
 <body>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scroll-progress"></div>
 
   <!-- ===== Navigation ===== -->
   <nav class="nav" id="nav">
@@ -50,25 +56,31 @@
         <a href="#writing">Publications</a>
         <a href="#contact">Contact</a>
       </div>
-      <a class="nav-cta" href="heritage-bio.pdf" download>Download Bio</a>
+      <div class="nav-right">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-sun" id="theme-icon"></i>
+        </button>
+        <a class="nav-cta" href="heritage-bio.pdf" download>Download Bio</a>
+      </div>
     </div>
   </nav>
 
   <!-- ===== Hero ===== -->
   <section class="hero" id="home">
+    <canvas class="hero-canvas" id="hero-canvas"></canvas>
     <div class="container">
       <div class="hero-grid">
 
         <div class="hero-copy reveal">
           <div class="hero-overline">
             <span class="pulse-dot"></span>
-            Fintech Founder &nbsp;·&nbsp; Bitcoin Researcher &nbsp;·&nbsp; Africa
+            <span id="typewriter" class="typewriter-text"></span>
           </div>
           <h1 class="hero-name">Heritage<br>Falodun</h1>
           <p class="hero-bio">Building the future of money in Africa, through Stablecoins, Bitcoin-first products, agentic payment rails, and protocol-level research.</p>
           <div class="hero-actions">
-            <a href="heritage-bio.pdf" download class="btn btn-primary">Download Bio</a>
-            <a href="#contact" class="btn btn-ghost">Get in touch →</a>
+            <a href="heritage-bio.pdf" download class="btn btn-primary magnetic">Download Bio</a>
+            <a href="#contact" class="btn btn-ghost magnetic">Get in touch →</a>
           </div>
           <div class="hero-proof">
             <div class="proof-item">
@@ -110,32 +122,32 @@
       <div class="section-header reveal">
         <p class="section-label">Current Ventures</p>
         <h2>What I'm Building</h2>
-        <p class="section-desc">Three companies advancing Stablecoins, Bitcoin and agent payments adoption across Africa.</p>
+        <p class="section-desc">Three companies advancing Stablecoins, Bitcoin and agentic payments adoption across Africa.</p>
       </div>
       <div class="ventures-grid">
-        <div class="venture-card featured reveal">
+        <div class="venture-card featured reveal tilt-card">
           <div class="venture-meta">Active &nbsp;·&nbsp; 2024</div>
           <h3>Neona Synergy</h3>
-          <p>B2B Agentic payment infrastructure combining Bitcoin, stablecoins, and fiat rails for global remmittance purpose-built for African market realities.</p>
+          <p>B2B agentic payment infrastructure combining Bitcoin, stablecoins, and fiat rails for global remittance — purpose-built for African market realities.</p>
           <div class="venture-tags">
             <span>Agentic Payments</span>
             <span>Bitcoin</span>
             <span>Stablecoins</span>
           </div>
         </div>
-        <div class="venture-card reveal reveal-delay-1">
+        <div class="venture-card reveal reveal-delay-1 tilt-card">
           <div class="venture-meta">Active &nbsp;·&nbsp; 2024</div>
-          <h3>Spendin </h3>
+          <h3>Spendin</h3>
           <p>B2C making stablecoins and fiat spendable for everyday Africans — fiat offramps, merchant tools, and affordable transaction rails.</p>
           <div class="venture-tags">
             <span>Consumer Fintech</span>
             <span>Offramp</span>
           </div>
         </div>
-        <div class="venture-card reveal reveal-delay-2">
+        <div class="venture-card reveal reveal-delay-2 tilt-card">
           <div class="venture-meta">Founded &nbsp;·&nbsp; 2022</div>
           <h3>DigiOats</h3>
-          <p>Heritage's first Bitcoin venture — a foundational platform for Bitcoin adoption in Africa with extensive service on Mining, Reaserch and Open Source development.</p>
+          <p>Heritage's first Bitcoin venture — a foundational platform for Bitcoin adoption in Africa with extensive work in Mining, Research and Open Source development.</p>
           <div class="venture-tags">
             <span>Bitcoin</span>
             <span>Africa</span>
@@ -155,22 +167,22 @@
           <h2>A builder at the intersection of Digital Finance and Africa</h2>
           <div class="about-text">
             <p>I'm Heritage Falodun, a fintech founder, Bitcoin protocol researcher, and product developer based in Africa. I've spent the last three years building at the frontier of digital money on the continent.</p>
-            <p>I believe Bitcoin is the most important monetary technology of our era, and that its greatest impact is yet to come in emerging markets. Africa has the demographics, the need, and the infrastructure for digital assests, AI and Bitcoin-native financial system.</p>
+            <p>I believe Bitcoin is the most important monetary technology of our era, and that its greatest impact is yet to come in emerging markets. Africa has the demographics, the need, and the infrastructure for digital assets, AI and Bitcoin-native financial systems.</p>
             <p>My work spans founding companies, contributing research to SSRN and Bitcoin Magazine, consulting on digital asset growth strategy, and advocating for sustainable Bitcoin mining using Nigeria's abundant flare gas.</p>
           </div>
           <div class="about-actions">
-            <a href="heritage-bio.pdf" download class="btn btn-primary">Read my full bio</a>
+            <a href="heritage-bio.pdf" download class="btn btn-primary magnetic">Read my full bio</a>
           </div>
         </div>
 
         <div class="about-sidebar reveal reveal-right">
-          <div class="stat-card">
-            <div class="stat-number">#3</div>
+          <div class="stat-card tilt-card">
+            <div class="stat-number" data-target="3" data-prefix="#">#3</div>
             <div class="stat-label">Most Impactful Bitcoiner in Africa — 2024</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-number">3×</div>
-            <div class="stat-label">Fintech, AI and Agentic Payment Companies Founded across Africa</div>
+          <div class="stat-card tilt-card">
+            <div class="stat-number" data-target="3" data-suffix="×">3×</div>
+            <div class="stat-label">Fintech Companies Founded across Africa</div>
           </div>
           <div class="about-link-list">
             <a href="https://bitcoinmagazine.com/authors/heritage-falodun" target="_blank" rel="noopener" class="about-link">
@@ -207,21 +219,21 @@
           <div class="timeline-year">2022</div>
           <div class="timeline-body">
             <h3>Co-founded DigiOats</h3>
-            <p>At 22, launched his first Bitcoin-first mining and development startup in Nigeria, setting the tone for Bitcoin adoption and education in Africa.</p>
+            <p>At 22, launched his first Bitcoin-first fintech startup in Nigeria, setting the tone for Bitcoin adoption in Africa.</p>
           </div>
         </div>
         <div class="timeline-item reveal reveal-delay-1">
           <div class="timeline-year">2023</div>
           <div class="timeline-body">
             <h3>Bitcoin Magazine Contributor</h3>
-            <p>Began publishing reports and research on Bitcoin adoption in Africa, blockchain growth strategy, and sustainable mining for global audiences.</p>
+            <p>Began publishing research on Bitcoin adoption in Africa, blockchain growth strategy, and sustainable mining for global audiences.</p>
           </div>
         </div>
         <div class="timeline-item reveal reveal-delay-2">
           <div class="timeline-year">2024</div>
           <div class="timeline-body">
             <h3>Neona Synergy & Spendin</h3>
-            <p>Founded two payment startups bringing agentic payment infrastructure, Stablecoins, OTC and Bitcoin spending rails to African markets.</p>
+            <p>Founded two payment startups bringing agentic payment infrastructure and Bitcoin spending rails to African markets.</p>
           </div>
         </div>
         <div class="timeline-item reveal reveal-delay-2">
@@ -235,7 +247,7 @@
           <div class="timeline-year">2025</div>
           <div class="timeline-body">
             <h3>Sustainable Mining Advocacy</h3>
-            <p>Promoting flare gas-powered Bitcoin mining in Nigeria, converting energy waste into resilient, low-carbon mining operations.</p>
+            <p>Promoting flare gas-powered Bitcoin mining in Nigeria — converting energy waste into resilient, low-carbon mining operations.</p>
           </div>
         </div>
       </div>
@@ -251,19 +263,22 @@
         <p class="section-desc">Perspectives on Bitcoin protocol, African fintech, and the future of money.</p>
       </div>
       <div class="writing-grid">
-        <a class="writing-card reveal" href="https://bitcoinmagazine.com/authors/heritage-falodun" target="_blank" rel="noopener">
+        <a class="writing-card reveal tilt-card" href="https://bitcoinmagazine.com/authors/heritage-falodun"
+          target="_blank" rel="noopener">
           <div class="writing-source">Bitcoin Magazine</div>
           <h3>Bitcoin & Africa</h3>
           <p>How Bitcoin is transforming financial access across the continent — adoption, infrastructure, and the path to a Bitcoin-native economy.</p>
           <span class="writing-link">Read on Bitcoin Magazine →</span>
         </a>
-        <a class="writing-card reveal reveal-delay-1" href="https://bitcoinmagazine.com/authors/heritage-falodun" target="_blank" rel="noopener">
+        <a class="writing-card reveal reveal-delay-1 tilt-card"
+          href="https://bitcoinmagazine.com/authors/heritage-falodun" target="_blank" rel="noopener">
           <div class="writing-source">Bitcoin Magazine</div>
           <h3>Sustainable Mining</h3>
           <p>Making the case for flare gas-powered Bitcoin mining in Nigeria — turning energy waste into resilient, low-carbon infrastructure.</p>
           <span class="writing-link">Read on Bitcoin Magazine →</span>
         </a>
-        <a class="writing-card reveal reveal-delay-2" href="https://bitcoinmagazine.com/authors/heritage-falodun" target="_blank" rel="noopener">
+        <a class="writing-card reveal reveal-delay-2 tilt-card"
+          href="https://bitcoinmagazine.com/authors/heritage-falodun" target="_blank" rel="noopener">
           <div class="writing-source">Bitcoin Magazine</div>
           <h3>Agentic Payment Protocols</h3>
           <p>Deep analysis of next-generation agentic payment design, Lightning Network dynamics, and building compliant fintech for underserved markets.</p>
@@ -271,7 +286,8 @@
         </a>
       </div>
       <div class="writing-cta reveal">
-        <a href="https://bitcoinmagazine.com/authors/heritage-falodun" target="_blank" rel="noopener" class="btn-ghost-large">
+        <a href="https://bitcoinmagazine.com/authors/heritage-falodun" target="_blank" rel="noopener"
+          class="btn-ghost-large">
           View all articles on Bitcoin Magazine →
         </a>
       </div>
@@ -296,7 +312,8 @@
           <a href="https://www.instagram.com/herrytheeagle" target="_blank" rel="noopener" class="social-btn">
             <i class="fab fa-instagram"></i> Instagram
           </a>
-          <a href="https://bitcoinmagazine.com/authors/heritage-falodun" target="_blank" rel="noopener" class="social-btn">
+          <a href="https://bitcoinmagazine.com/authors/heritage-falodun" target="_blank" rel="noopener"
+            class="social-btn">
             <i class="fas fa-book-open"></i> Bitcoin Magazine
           </a>
         </div>
@@ -310,7 +327,7 @@
       <div class="footer-inner">
         <div class="footer-left">
           <p class="footer-name">Heritage Falodun</p>
-          <p class="footer-tagline">Building the future of money and payments globally starting with Africa.</p>
+          <p class="footer-tagline">Building the future of money in Africa.</p>
         </div>
         <div class="footer-right">
           <p class="footer-copy">© 2026 Heritage Falodun</p>
@@ -319,7 +336,6 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="js/main.js"></script>
 
 </body>
