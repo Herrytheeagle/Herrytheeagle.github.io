@@ -1061,19 +1061,6 @@ body.custom-cursor * {
   margin-bottom: 2rem;
 }
 
-.contact-email {
-  display: inline-block;
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--orange);
-  border-bottom: 1px solid rgba(247, 147, 26, 0.3);
-  padding-bottom: 2px;
-  margin-bottom: 2.5rem;
-  transition: border-color var(--ease), color var(--ease);
-}
-
-.contact-email:hover { border-color: var(--orange); }
-
 .contact-social {
   display: flex;
   flex-wrap: wrap;
@@ -1100,6 +1087,26 @@ body.custom-cursor * {
   color: var(--orange);
   background: var(--orange-dim);
   transform: translateY(-2px);
+}
+
+.social-btn--gmail {
+  border-color: rgba(234, 67, 53, 0.35);
+  color: #ea4335;
+}
+.social-btn--gmail:hover {
+  border-color: #ea4335;
+  color: #ea4335;
+  background: rgba(234, 67, 53, 0.08);
+}
+
+.social-btn--work {
+  border-color: rgba(96, 165, 250, 0.35);
+  color: var(--blue);
+}
+.social-btn--work:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+  background: rgba(96, 165, 250, 0.08);
 }
 
 /* ---------- Footer ---------- */
