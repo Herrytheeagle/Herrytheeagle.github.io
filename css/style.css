@@ -561,9 +561,28 @@ body.custom-cursor * {
   background: rgba(245, 247, 251, 0.94);
 }
 
+.badge-founder {
+  bottom: auto;
+  left: auto;
+  top: 1.75rem;
+  right: -1.25rem;
+  color: var(--blue);
+  border-color: var(--blue);
+  animation: badgePulseBlue 3s ease-in-out infinite 1.5s;
+}
+
+[data-theme="light"] .badge-founder {
+  background: rgba(245, 247, 251, 0.94);
+}
+
 @keyframes badgePulse {
   0%, 100% { box-shadow: 0 0 0 0 rgba(247, 147, 26, 0); }
   50% { box-shadow: 0 0 0 6px rgba(247, 147, 26, 0.08); }
+}
+
+@keyframes badgePulseBlue {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(96, 165, 250, 0); }
+  50% { box-shadow: 0 0 0 6px rgba(96, 165, 250, 0.12); }
 }
 
 .badge-icon { font-size: 1rem; font-weight: 700; }
@@ -1131,6 +1150,7 @@ body.custom-cursor * {
   .hero-visual { order: -1; }
   .hero-photo-frame { max-width: 320px; margin: 0 auto; }
   .hero-photo-badge { left: 0; }
+  .badge-founder { left: auto; right: 0; }
   .scroll-indicator { display: none; }
 
   .ventures-grid { grid-template-columns: 1fr; }
