@@ -635,13 +635,11 @@ body.custom-cursor * {
 .media-logo {
   display: inline-flex;
   align-items: center;
-  opacity: 0.45;
-  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .media-logo:hover {
-  opacity: 1;
-  transform: translateY(-2px);
+  transform: scale(1.12);
 }
 
 .media-logo img {
@@ -649,20 +647,6 @@ body.custom-cursor * {
   width: auto;
   max-width: 120px;
   object-fit: contain;
-  filter: brightness(0) invert(1);
-  transition: filter 0.3s var(--ease);
-}
-
-.media-logo:hover img {
-  filter: none;
-}
-
-[data-theme="light"] .media-logo img {
-  filter: brightness(0);
-}
-
-[data-theme="light"] .media-logo:hover img {
-  filter: none;
 }
 
 /* ---------- Ventures ---------- */
