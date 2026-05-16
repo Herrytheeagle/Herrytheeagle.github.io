@@ -608,6 +608,63 @@ body.custom-cursor * {
   50% { transform: translateY(7px); opacity: 1; }
 }
 
+/* ---------- Featured In Media ---------- */
+.media-section {
+  padding: 2.5rem 0 3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.media-label {
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 2rem;
+}
+
+.media-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem 3.5rem;
+}
+
+.media-logo {
+  display: inline-flex;
+  align-items: center;
+  opacity: 0.45;
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
+}
+
+.media-logo:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.media-logo img {
+  height: 28px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s var(--ease);
+}
+
+.media-logo:hover img {
+  filter: none;
+}
+
+[data-theme="light"] .media-logo img {
+  filter: brightness(0);
+}
+
+[data-theme="light"] .media-logo:hover img {
+  filter: none;
+}
+
 /* ---------- Ventures ---------- */
 .ventures-grid {
   display: grid;
@@ -1194,6 +1251,9 @@ body.custom-cursor * {
 }
 
 @media (max-width: 480px) {
+  .media-strip { gap: 1.75rem 2rem; }
+  .media-logo img { height: 22px; max-width: 90px; }
+
   .hero-name { font-size: 3rem; }
 
   .hero-actions {
